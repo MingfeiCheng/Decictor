@@ -1,0 +1,50 @@
+name: decictor
+entry_point: fuzzer.decictor.fuzzer_runner:DecictorFuzzer
+
+# configs
+population_size: 4
+stop_first_nods: false
+run_hour: 4
+mutator:
+  prob_type: 0.5
+  prob_perturb: 1.0
+  prob_remove: 1.0
+  motion_interval: 1
+  limit_static: 20 # <=
+  limit_vehicle: 15 # <=
+  min_add_static: 1
+  max_add_static: 4
+  min_remove_static: 1
+  max_remove_static: 4
+  min_remove_vehicle: 1
+  max_remove_vehicle: 2
+  max_tries: 20
+  static_mutator:
+    perturb_prob: 0.5
+    max_tries: 10
+    noise_x: [-0.05, 0.05]
+    noise_y: [-0.05, 0.05]
+    threshold_ego: [0.0, 0.0]
+    threshold_static: [0.0, 0.0]
+    threshold_vehicle: [0.0, 0.0]
+  vehicle_mutator:
+    perturb_prob: 0.5
+    max_tries: 10
+    future_frames: 1
+    noise_trigger: [-0.5, 0.5]
+    noise_l: [-0.4, 0.4]
+    noise_l_interval: [2, 20]
+    noise_speed: [-0.1, 0.1]
+    threshold_ego: [ 5.0, 0.05 ]
+    threshold_static: [ 0.0, 0.0 ]
+    threshold_vehicle: [ 1.5, 0.0 ]
+selector:
+  mode: roulette
+# oracle
+oracle:
+  optimal_threshold: 0.4
+  grid_unit: 2.0
+# fitness
+fitness:
+  mode: both # [behavior, path, both]
+  line_unit: 2.0

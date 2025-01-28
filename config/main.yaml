@@ -1,0 +1,18 @@
+defaults:
+  - _self_
+  - common: project
+  - fuzzer: decictor
+
+seed_name: scenario_3
+map_name: sunnyvale_loop
+run_name: run_1
+
+# log config
+log_level: 'DEBUG'
+debug: false
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: disabled

@@ -1,0 +1,17 @@
+name: behavexplor
+entry_point: fuzzer.behavexplor.fuzzer_runner:BehAVExplorFuzzer
+
+# configs
+initial_corpus_size: 4
+run_hour: 4
+window_size: 10
+cluster_num: 10
+threshold_coverage: 0.4
+threshold_energy: 0.6
+feature_resample: linear
+# oracle
+optimal_threshold: 0.4
+grid_unit: 2.0
+mutator:
+  s_interval: 2.0
+  npc_number: 10

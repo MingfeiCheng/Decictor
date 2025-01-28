@@ -1,0 +1,14 @@
+apollo_root: /data/d/mingfeicheng/Decictor/software/apollo
+project_root: /data/d/mingfeicheng/Decictor
+output_root: /data/d/mingfeicheng/Decictor/outputs
+
+# container - apollo
+container_record_default_folder: /apollo/outputs
+force_green: true
+delete_record: true
+perception_range: null
+# basic violation
+time_limit: 600 # seconds, the max time for a scenario
+stuck_time_limit: 60 # seconds, the max time for stuck of ego
+start_time: 0 # start/trigger time for the ego
+threshold_dest: 8.0

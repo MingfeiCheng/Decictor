@@ -1,0 +1,11 @@
+name: samota
+entry_point: fuzzer.samota.fuzzer_runner:SAMOTAFuzzer
+
+# configs
+run_hour: 4
+# oracle
+optimal_threshold: 0.4
+grid_unit: 2.0
+mutator:
+  s_interval: 2.0
+  npc_number: 4
