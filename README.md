@@ -65,7 +65,7 @@ For convenient configuration, we recommend downloading Apollo from [Zenodo](http
 We have fixed several build bugs in Apollo v7.0.0 and added command-line tools for SimControl.  
 ```shell
 cd /workspace
-wget https://zenodo.org/records/14752133/files/apollo.zip
+# download apollo.zip
 unzip apollo.zip
 cd /workspace/apollo
 ```
@@ -125,7 +125,7 @@ If you prefer to use the **GitHub Source**, you will need to download the maps s
 #### 1. Zenodo Source
 ```aiignore
 cd /workspace
-wget https://zenodo.org/records/14752133/files/Decictor.zip
+# download Decictor.zip
 unzip Decictor.zip
 ```
 
