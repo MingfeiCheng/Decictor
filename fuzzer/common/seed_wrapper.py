@@ -2,6 +2,7 @@ import json
 import os
 
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List, Optional, Any, Dict
 
 from scenario.config.scenario_config import ScenarioConfig
@@ -154,7 +155,7 @@ class SeedWrapper:
     def from_json(cls, json_file: str):
         with open(json_file, 'r') as f:
             json_data = json.load(f)
-
+        json_data["save_root"] = Path(json_file).parent.parent
         scenario_json_file = os.path.join(json_data['save_root'], 'scenario', f"{json_data['scenario']}.json")
         with open(scenario_json_file, 'r') as f:
             scenario_json_data = json.load(f)
