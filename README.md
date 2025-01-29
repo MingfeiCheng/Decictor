@@ -61,11 +61,11 @@ We assume the root directory is `/workspace`. Please replace it with your own di
 ### A. Install Baidu Apollo
 #### A-1: Download Apollo
 1. **Recommended** (Zenodo)    
-For convenient configuration, we recommend downloading Apollo from [Zenodo](https://zenodo.org/records/14752134).  
+For convenient configuration, we recommend downloading Apollo from [Zenodo](https://zenodo.org/records/14752133).  
 We have fixed several build bugs in Apollo v7.0.0 and added command-line tools for SimControl.  
 ```shell
 cd /workspace
-wget https://zenodo.org/records/14752134/files/apollo.zip
+wget https://zenodo.org/records/14752133/files/apollo.zip
 unzip apollo.zip
 cd /workspace/apollo
 ```
@@ -119,13 +119,13 @@ You can exit the container by typing `exit`.
 ### B: Setup Decictor
 #### B-1: Download Decictor
 We provide two sources (Zenodo and Github) for Decictor. 
-Considering that Decictor includes some large external files (e.g., maps), we recommend users start with the **[Zenodo Source](https://zenodo.org/records/14752134)**, which contains all the necessary files.
+Considering that Decictor includes some large external files (e.g., maps), we recommend users start with the **[Zenodo Source](https://zenodo.org/records/14752133)**, which contains all the necessary files.
 If you prefer to use the **GitHub Source**, you will need to download the maps separately.
 
 #### 1. Zenodo Source
 ```aiignore
 cd /workspace
-wget https://zenodo.org/records/14752134/files/Decictor.zip
+wget https://zenodo.org/records/14752133/files/Decictor.zip
 unzip Decictor.zip
 ```
 
@@ -193,7 +193,7 @@ Note that you need to update the `project_root` variable in each script before e
 
 ### Others
 Moreover, for the baselines `DoppelTest` and `scenoRITA`, we only modify the initial seeds in their original projects. 
-The modified projects are available on [Zenodo](https://zenodo.org/records/14752134). Please refer to their documentation and follow the provided instructions to set up the projects.
+The modified projects are available on [Zenodo](https://zenodo.org/records/14752133). Please refer to their documentation and follow the provided instructions to set up the projects.
 We provide a `run_scenarios.sh` script to run their projects under Decictor's settings. To use it, simply update the `seed_root` variable in the shell script.
 
 
