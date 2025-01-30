@@ -4,8 +4,9 @@ entry_point: fuzzer.drivefuzz.fuzzer_runner:DriveFuzzer
 # configs
 run_hour: 4
 # oracle
-optimal_threshold: 0.4
-grid_unit: 2.0
+oracle:
+  optimal_threshold: 0.4
+  grid_unit: 2.0
 mutator:
   s_interval: 2.0
   npc_number: 10

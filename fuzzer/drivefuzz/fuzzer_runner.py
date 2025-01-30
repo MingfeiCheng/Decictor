@@ -50,7 +50,7 @@ class DriveFuzzer:
         # config optimal oracle
         # load refer seed - the input is the optimal seed. only one I think
         self.seed_id = 0
-        refer_seed_json = os.path.join(cfg.seed_folder, 'result/result_0.json')
+        refer_seed_json = os.path.join(GlobalConfig.seed_dir, 'result/result_0.json')
         if not os.path.isfile(refer_seed_json):
             logger.debug(refer_seed_json)
             raise RuntimeError(f'{refer_seed_json} not exists')
@@ -58,7 +58,11 @@ class DriveFuzzer:
         self.refer_seed.id = self.seed_id
         self.refer_seed.save_root = self.save_root # !!!
         self.seed_id += 1
-        self.optimal_checker = OptimalOracle(self.refer_seed, cfg.fuzzer.optimal_threshold, cfg.fuzzer.grid_unit)
+        self.optimal_checker = OptimalOracle(
+            self.refer_seed, 
+            cfg_fuzzer.oracle.optimal_threshold, 
+            cfg_fuzzer.oracle.grid_unit
+        )
 
         debug_folder = os.path.join(self.save_root, 'debug')
         if not os.path.exists(debug_folder):
