@@ -27,7 +27,7 @@ run_test() {
       fuzzer.run_hour=$run_hour \
       seed_name=$seed_name \
       map_name=$map_name \
-      run_name="$run_local_name"
+      run_name="$run_name"
 }
 
 for run_id in $repeat_lst; do
