@@ -93,7 +93,7 @@ Please refer to https://github.com/ApolloAuto/apollo/issues/14374 and https://gi
 Step 3: Move the `Decictor/apollo/sim_control` directory to the `apollo/modules` folder.
 
 ##### A-2. Build Apollo
-
+_**Note: The following commands may require sudo privileges depending on your Docker settings. If you encounter a "permission denied" error, please try running the command with sudo.**_  
 (1) Start docker container
 ```aiignore
 cd /workspace/apollo
